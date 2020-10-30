@@ -42,16 +42,10 @@ def get_interesting_words(file):
             file_contents += char
 
     # Split every word
-    file_contents = file_contents.split()
-    # A lsit to store interesting words
-    interesting_words = []
+    spit_contents = file_contents.split()
 
-    # loop every word in the list
-    for word in file_contents:
-    	# Check lower case words
-        if word.lower() not in uninteresting_words and word.isalpha() == True:
-        	# Add the interesting words to list
-            interesting_words.append(word)	
+    # loop every word in the list. Check lower case words. Add the interesting words to list
+    interesting_words = [item for item in spit_contents if item.lower() not in uninteresting_words and item.isalpha() == True]
 
     return interesting_words
 

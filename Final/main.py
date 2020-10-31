@@ -56,12 +56,9 @@ def calculate_frequencies(words):
 
     # loop words in the list
     for word in words:
-    	# if word is not in the list. Add 1 value
-        if word.lower() not in frequencies:
-            frequencies[word.lower()] = 1
+        # if word is not in the list. Add 1 value
         # Add count for every word repeatition
-        else:
-            frequencies[word.lower()] += 1
+        frequencies[word.lower()] = frequencies.get(word, 0) + 1
 
     return frequencies
 

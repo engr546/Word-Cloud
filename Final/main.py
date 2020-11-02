@@ -24,7 +24,7 @@ def image_name(name):
 
 def get_interesting_words(file):
 	# Here is a list of punctuations and uninteresting words you can use to process your text
-    punctuations = '''!()-[]{};:'"\\,<>./?@#$%^&*_~'''
+    # punctuations = '''!()-[]{};:'"\\,<>./?@#$%^&*_~'''
     uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", \
     "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them", \
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", \
@@ -75,6 +75,8 @@ def generate_word_cloud(frequencies):
 
 
 words = get_interesting_words(file)
+
+print(words)
 
 file_frequencies = calculate_frequencies(words)
 
